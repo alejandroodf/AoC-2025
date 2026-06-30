@@ -83,7 +83,6 @@ classDiagram
 
 *   **Adapter Pattern (Reader)**: Aislamos la entrada cruda del solver mediante `RotationReader`. El solver nunca hace `split` ni manipula strings; recibe una secuencia limpia de records de dominio `Rotation`.
 *   **Strategy Pattern (Scorers)**: La lógica que dictamina si una rotación cuenta como acierto (Parte A: finaliza en 0; Parte B: pasa o toca el 0) se abstrae mediante la interfaz `RotationScorer` e implementaciones concretas `EndAtZeroScorer` y `PassThroughZeroScorer`, facilitando la extensibilidad sin alterar el orquestador principal.
-*   **Composition over Herencia (COI)**: El `Dial` físico se compone y colabora directamente dentro de un flujo funcional declarativo en `Day01Solver` a través de inyección de constructores de dependencias.
 
 ---
 
